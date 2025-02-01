@@ -1,0 +1,15 @@
+<div class="products">
+    <h1>Liste des Produits</h1>
+    <label for="sortSelect">Trier par :</label>
+    <select id="sortSelect" [(ngModel)]="selectedSort" (change)="onSortChange()">
+      <option *ngFor="let option of sortOptions" [value]="option.value">
+        {{ option.label }}
+      </option>
+    </select>
+    <div class="product-list">
+      <app-product
+        *ngFor="let product of products"
+        [product]="product">
+      </app-product>
+    </div>
+  </div>

@@ -1,0 +1,28 @@
+.products {
+    padding: 20px;
+  }
+  
+  .product-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+  }
+  
+  .product-card h2 {
+    margin: 0;
+  }
+  
+  .product-card button {
+    background-color: #a80184;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .product-card button:hover {
+    background-color: #a80184;
+  }
+  

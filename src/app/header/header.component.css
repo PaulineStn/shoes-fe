@@ -1,0 +1,154 @@
+/* Style général pour le header */
+header {
+    background-color: #e7e7e7;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Logo */
+  .navbar-brand .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #a80184;
+    text-decoration: none;
+  }
+  
+  /* Liens de navigation */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li {
+    display: inline;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+  }
+  
+  .nav-links a.active {
+    color: #ff00c893;
+    font-weight: bold;
+    border-bottom: 2px solid #ff00c893;
+  }
+  
+  /* Barre de recherche */
+  .search-bar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-bar input {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 5px;
+  }
+  
+  .search-bar button {
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    background-color: rgba(255, 0, 179, 0.493);
+    cursor: pointer;
+    box-shadow: 2px 3px 0px black;
+    border: 3px solid;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    z-index: 100;
+    transition: box-shadow 250ms, transform 250ms, filter 50ms;
+  }
+  
+  .search-bar button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 3px 0px black;
+  }
+  .search-bar button:active {
+    filter: saturate(0.75);
+  }
+  .search-bar button::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: pink;
+    z-index: -1;
+    transform: translateX(-100%);
+    transition: transform 250ms;
+  }
+  .search-bar button:hover::after {
+    transform: translateX(0);
+  }
+  .bgContainer {
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    overflow: hidden;
+    max-width: 50%; /* adjust this if the button text is not proper */
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .bgContainer span:last-child{
+    position: relative;
+    transform: translateX(-100%);
+    transition: all 250ms;
+  }
+
+  .button:hover .bgContainer > span:first-child {
+    transform: translateX(0);
+  }
+  .arrowContainer {
+    padding: 3px;
+    margin-inline-end: 0.5em;
+    border: 2px solid;
+    border-radius: 50%;
+    background-color: pink;
+    position: relative;
+    overflow: hidden;
+    transition: transform 250ms, background-color 250ms;
+    z-index: 100;
+  }
+  .arrowContainer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background-color: rgba(255, 0, 179, 0.493);
+    transform: translateX(-100%);
+    z-index: -1;
+    transition: transform 250ms ease-in-out;
+  }
+  button:hover .arrowContainer::after {
+    transform: translateX(0);
+  }
+  button:hover .arrowContainer {
+    transform: translateX(5px);
+  }
+  button:active .arrowContainer {
+    transform: translateX(8px);
+  }
+  .arrowContainer svg {
+    vertical-align: middle;
+  }
+
+
+
+  
+  
+  
