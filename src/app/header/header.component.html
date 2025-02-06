@@ -2,21 +2,24 @@
     <nav class="navbar">
       <!-- Logo -->
       <div class="navbar-brand">
-        <a routerLink="/" routerLinkActive="active" class="logo">Sneakers Custom de Pauline</a>
+        <a routerLink="/" routerLinkActive="active">
+          <img src="assets/Pauline_custom_sneakers.jpg" alt="Sneakers Custom de Pauline" class="logo-image">
+        </a>
       </div>
   
       <!-- Navigation Links -->
       <ul class="nav-links">
-        <li><a routerLink="/products" routerLinkActive="active">Produits</a></li>
-        <li><a routerLink="/user" routerLinkActive="active">Utilisateur</a></li>
-        <li><a routerLink="/cart" routerLinkActive="active">Panier</a></li>
+        <li><a routerLink="/products" routerLinkActive="active"> <i class="fas fa-shoe-prints"></i> Produits</a></li>
+        <li><a routerLink="/user" routerLinkActive="active"><i class="fas fa-user"></i> Utilisateur</a></li>
+        <li><a routerLink="/cart" routerLinkActive="active"><i class="fas fa-shopping-cart"></i> Panier</a></li>
       </ul>
   
-      <!-- Search Bar (Optionnel) -->
-      <div class="search-bar">
-        <input type="text" placeholder="Rechercher un produit..." />
 
-        <!--<button>Rechercher</button>-->
+      <input type="text" [(ngModel)]="searchQuery" (input)="onSearchChange()" placeholder="Recherchez des chaussures..." class="search-input" />
+      
+      <!-- Search Bar (Optionnel)
+      <div class="search-bar">
+        <input type="text" [(ngModel)]="searchQuery" (input)="onSearchChange()" placeholder="Recherchez un produit..." />
 
         <button class="button">
           <div class="bgContainer">
@@ -38,7 +41,7 @@
             </svg>
           </div>
         </button>
-      </div>
+      </div> -->
     </nav>
   </header>
   
