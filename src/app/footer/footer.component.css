@@ -4,9 +4,13 @@
 
 .footer {
     background-color: #333;
+    position:relative;
+    bottom:0px;
+    width:100%;
     color: #f1f1f1;
     padding: 20px 10px;
     font-size: 14px;
+  
   }
   
   .footer-content {
@@ -20,6 +24,8 @@
   .footer-section {
     margin: 10px;
     max-width: 300px;
+    position:static;
+    
   }
   
   .footer-section h3 {
@@ -47,6 +53,7 @@
     margin-top: 20px;
     border-top: 1px solid #444;
     padding-top: 10px;
+    position:static;
   }
   
   .footer-bottom p {

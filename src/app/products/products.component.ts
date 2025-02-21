@@ -3,6 +3,8 @@ import { ProductService } from '../services/product.service';
 import { Product } from '../models/product.model';
 import { NgModel } from '@angular/forms';
 import { SearchService } from '../services/search.service';
+import { ProductComponent } from './product/product.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-products',
@@ -23,7 +25,8 @@ export class ProductsComponent implements OnInit {
 
   constructor(
     private productService: ProductService,
-    private searchService: SearchService
+    private searchService: SearchService,
+    private dialog: MatDialog
   ) {}
 
   ngOnInit(): void {
@@ -77,6 +80,13 @@ export class ProductsComponent implements OnInit {
 
   onSortChange(): void {
     this.getShoes(); // Relancer la requête lorsque le tri change
+  }
+
+  viewDetails(product: Product) {
+    this.dialog.open(ProductComponent, {
+      width: '400px',
+      data: product
+    });
   }
 
 
